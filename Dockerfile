@@ -6,8 +6,6 @@ ARG ver
 
 ENV VERSION=$ver
 
-# COPY ./src/sentinel-dashboard-${VERSION}.jar /data/app.jar
-
 RUN set -xe \
     && mkdir /data \
     && wget -O /data/app.jar https://github.com/alibaba/Sentinel/releases/download/${VERSION}/sentinel-dashboard-${VERSION}.jar
