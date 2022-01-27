@@ -11,12 +11,10 @@ docker build -t longjianghu/sentinel:1.8.3 --build-arg ver=1.8.3 ./
 
 docker run --name sentinel -p 8080:8080 --restart=always -d longjianghu/sentinel:1.8.3
 
-自定义用户名和密码参数：
+控制台参数：
 
--Dsentinel.dashboard.auth.username=sentinel
+https://sentinelguard.io/zh-cn/docs/dashboard.html
 
--Dsentinel.dashboard.auth.password=123456
-
-运行示例：
+自定义用户名和密码示例：
 
 docker run --name sentinel -p 8080:8080 --restart=always -d longjianghu/sentinel:1.8.3 -Dsentinel.dashboard.auth.username=sentinel -Dsentinel.dashboard.auth.password=123456
